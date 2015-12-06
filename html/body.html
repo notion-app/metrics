@@ -1,0 +1,22 @@
+<body>
+<div class="container-fluid">
+
+  {{> navbar}}
+
+  {{#if currentUser}}
+    <table class="table table-bordered">
+      <thead>
+        <td>Since</td>
+        <td>Level</td>
+        <td>Message</td>
+      </thead>
+      <tbody>
+        {{#each logs}}
+          {{> logmessage}}
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+
+</div>
+</body>

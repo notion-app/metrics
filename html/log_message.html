@@ -1,0 +1,16 @@
+<template name="logmessage">
+  {{#if isLevelInfo}}
+    <tr class="success">
+      <td>{{timeSince}}</td>
+      <td>{{level}}</td>
+      <td>{{message}}</td>
+    </tr>
+  {{/if}}
+  {{#if isLevelError}}
+    <tr class="error">
+      <td>{{timeSince}}</td>
+      <td>{{level}}</td>
+      <td>{{message}}</td>
+    </tr>
+  {{/if}}
+</template>
