@@ -8,6 +8,12 @@ if (Meteor.isClient) {
     }
   })
 
+  Template.navbar.events({
+    "click #purge_database": function() {
+      Meteor.call("purge_logs")
+    }
+  })
+
   Template.logmessage.helpers({
     timeSince: function() {
       return moment(this.time).fromNow()
